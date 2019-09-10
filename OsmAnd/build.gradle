@@ -304,6 +304,8 @@ task copyStyleIcons(type: Copy) {
 task copyWidgetIcons(type: Exec) {
 	if (!Os.isFamily(Os.FAMILY_WINDOWS)) {
 		commandLine 'sh', file("./copy_widget_icons.sh").getAbsolutePath()
+	} else {
+		commandLine 'cmd', '/c', 'Powershell', '-file', file("./copy_widget_icons.ps1").getAbsolutePath()
 	}
 }
 

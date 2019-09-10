@@ -18,6 +18,7 @@ OsmAndCore_*.aar
 .idea
 .project
 out/
+*.hprof
 
 # Android Studio
 /.idea
